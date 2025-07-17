@@ -1,0 +1,377 @@
+/* ============= All Cards Carousel Start ============= */
+.hero-slider-sec {
+  height: 100vh;
+}
+
+.carousel-caption {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  text-align: center;
+  color: #fff;
+  width: 100%;
+  padding: 0 15px;
+}
+
+.carousel-item img {
+  height: 100vh;
+  object-fit: cover;
+  position: relative;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  width: 3rem;
+  height: 3rem;
+}
+/* ============= All Cards Carousel End ============= */
+
+
+/* ============= Sunny Card Start ============= */
+.weather-card {
+  background: url('assets/sunny-gif.gif') no-repeat center/cover;
+  border-radius: 20px;
+  max-width: 400px;
+  width: 90%;
+  padding: 25px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  color: #fff;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.card-1 {
+  background: url('assets/sunny-giff.gif') no-repeat center/cover;
+}
+
+.card-2 {
+  background: url('assets/sunny-gif-2.gif') no-repeat center/cover;
+}
+
+.card-3 {
+  background: url('assets/sunny-gif.gif') no-repeat center/cover;
+}
+
+.weather-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.5), transparent);
+  z-index: 1;
+}
+
+.weather-content {
+  position: relative;
+  z-index: 2;
+}
+
+.weather-card .weather-icon {
+  font-size: 50px;
+  margin-bottom: 10px;
+}
+
+.weather-card .temperature {
+  font-size: 50px;
+  font-weight: bold;
+  margin: 10px 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.weather-card .location {
+  font-size: 20px;
+  margin-bottom: 5px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.weather-card .time {
+  font-size: 14px;
+  opacity: 0.9;
+  margin-bottom: 15px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.weather-card .forecast {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 15px;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.weather-card .day {
+  font-size: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.weather-card .day-icon {
+  font-size: 18px;
+  margin-bottom: 3px;
+  color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .weather-card {
+    max-width: 300px;
+    padding: 20px;
+  }
+
+  .weather-card .temperature {
+    font-size: 40px;
+  }
+
+  .weather-card .location {
+    font-size: 18px;
+  }
+
+  .weather-card .time {
+    font-size: 12px;
+  }
+
+  .weather-card .day {
+    font-size: 10px;
+  }
+
+  .weather-card .day-icon {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .weather-card {
+    max-width: 250px;
+    padding: 15px;
+  }
+
+  .weather-card .temperature {
+    font-size: 30px;
+  }
+
+  .weather-card .location {
+    font-size: 16px;
+  }
+
+  .weather-card .time {
+    font-size: 10px;
+  }
+
+  .weather-card .day {
+    font-size: 8px;
+  }
+
+  .weather-card .day-icon {
+    font-size: 14px;
+  }
+}
+
+/* ============= Sunny Card End ============= */
+
+
+/* ============= Spring Card Start ============= */
+.magic-card {
+  background: linear-gradient(135deg, #e8f5e9, #c8e6c9);
+  border: 2px solid #a5d6a7;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+  max-width: 350px;
+  width: 90%;
+  margin: 0 auto;
+  padding: 25px;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+
+
+.magic-content {
+  position: relative;
+  z-index: 2;
+}
+
+.magic-card .weather-icon {
+  font-size: 50px;
+  color: #d81b60;
+  text-shadow: 0 0 8px rgba(216, 27, 96, 0.5);
+  margin-bottom: 15px;
+}
+
+.magic-card .temperature {
+  font-size: 50px;
+  font-weight: 700;
+  color: #388e3c;
+  text-shadow: 1px 1px 4px rgba(56, 142, 60, 0.3);
+  margin: 10px 0;
+}
+
+.magic-card .location {
+  font-family: cursive;
+  font-size: 22px;
+  color: #6a1b9a;
+  text-shadow: 0 0 4px rgba(106, 27, 154, 0.3);
+  margin-bottom: 8px;
+}
+
+.magic-card .time {
+  font-size: 16px;
+  color: #424242;
+  text-shadow: 0 0 2px rgba(66, 66, 66, 0.2);
+  margin-bottom: 20px;
+}
+
+.magic-card .forecast {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 20px;
+  border-top: 1px dashed #ce93d8;
+}
+
+.magic-card .day {
+  font-size: 14px;
+  color: #4a148c;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.magic-card .day-icon {
+  font-size: 20px;
+  margin-bottom: 4px;
+  color: #ab47bc;
+  text-shadow: 0 0 4px rgba(171, 71, 188, 0.3);
+}
+
+.magic-card .spring-leaves {
+  position: absolute;
+  font-size: 22px;
+  color: #66bb6a;
+  animation: float 4s ease-in-out infinite;
+}
+
+.magic-card .spring-leaves.left {
+  top: 15px;
+  left: 15px;
+}
+
+.magic-card .spring-leaves.right {
+  top: 15px;
+  right: 15px;
+  animation-delay: 2s;
+}
+
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+
+  50% {
+    transform: translateY(-12px) rotate(10deg);
+  }
+}
+
+.magic-card .butterfly {
+  position: absolute;
+  font-size: 28px;
+  color: #ab47bc;
+  animation: fly 6s ease-in-out infinite;
+  text-shadow: 0 0 8px rgba(171, 71, 188, 0.5);
+}
+
+.magic-card .butterfly.left {
+  top: 20px;
+  left: 20px;
+}
+
+.magic-card .butterfly.right {
+  bottom: 20px;
+  right: 20px;
+  animation-delay: 3s;
+}
+
+@keyframes fly {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+
+  25% {
+    transform: translate(15px, -15px) rotate(20deg);
+  }
+
+  50% {
+    transform: translate(0, -30px) rotate(0deg);
+  }
+
+  75% {
+    transform: translate(-15px, -15px) rotate(-20deg);
+  }
+
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .magic-card {
+    max-width: 300px;
+    padding: 20px;
+  }
+
+  .magic-card .temperature {
+    font-size: 40px;
+  }
+
+  .magic-card .location {
+    font-size: 18px;
+  }
+
+  .magic-card .time {
+    font-size: 14px;
+  }
+
+  .magic-card .day {
+    font-size: 12px;
+  }
+
+  .magic-card .day-icon {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .magic-card {
+    max-width: 250px;
+    padding: 15px;
+  }
+
+  .magic-card .temperature {
+    font-size: 30px;
+  }
+
+  .magic-card .location {
+    font-size: 16px;
+  }
+
+  .magic-card .time {
+    font-size: 12px;
+  }
+
+  .magic-card .day {
+    font-size: 10px;
+  }
+
+  .magic-card .day-icon {
+    font-size: 16px;
+  }
+}
+
+/* ============= Spring Card Start ============= */
