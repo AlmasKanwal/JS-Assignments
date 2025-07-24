@@ -32,9 +32,3 @@ document.writeln("<p>Variables must begin with a letter, underscore (_) or dolla
 document.writeln("<p>Variable names are case sensitive</p>");
 // e) Variable names should not be JS _________
 document.writeln("<p>Variable names should not be JS keywords</p>");
-
-
-
-
-
-/* Question # 01:  */
