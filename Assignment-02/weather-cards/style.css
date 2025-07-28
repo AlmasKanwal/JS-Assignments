@@ -224,9 +224,9 @@
   width: 90%;
   margin: 0 auto;
   padding: 25px;
-  /* height: 800px; */
+  height: 800px;
   position: relative;
-  overflow: hidden;
+  /* overflow: hidden; */
   text-align: center;
 }
 
