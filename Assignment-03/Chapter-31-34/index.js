@@ -8,7 +8,7 @@ document.writeln(`Current Date & Time: ${currentDate}`);
 
 
 /* Question No.02: Write a program that alerts the current month in words.
-For example December. */
+For example December.  */
 document.writeln(`<h2>Question No.02</h2>`);
 document.writeln(`<h3>Current Month in Words</h3>`);
 
