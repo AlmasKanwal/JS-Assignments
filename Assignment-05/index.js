@@ -1,7 +1,7 @@
 var images = [
     "/assets/pizza.jpg",
     "/assets/chicken-shashlik.jpg",
-    "/assets/pizza.jpg",
+    "/assets/chowmein.jpg",
     "/assets/rice-shahshlik.jpg",
     "/assets/paratha.jpg",
     "/assets/biryani.jpg",
