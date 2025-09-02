@@ -57,4 +57,4 @@ function activeThumb(index) {
 
 showImage();
 
-sliderImage.onclick = next;
+
