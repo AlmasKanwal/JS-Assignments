@@ -1,0 +1,309 @@
+/* ============= Header Start ============= */
+
+/* ============= Top Navbar Start ============= */
+@media (max-width: 768px) {
+  .left p {
+    font-size: 11px;
+  }
+
+  .right {
+    gap: 10px;
+  }
+
+  .right a {
+    font-size: 11px;
+  }
+
+  .timer span {
+    width: 18px;
+    height: 18px;
+    font-size: 9px;
+  }
+}
+
+@media (max-width: 670px) {
+  .top-navbar .right {
+    display: none;
+  }
+}
+
+@media (max-width: 632px) {
+  /* .container-xxl {
+        flex-direction: column;
+        gap: 6px;
+    } */
+
+  .top-navbar {
+    height: auto;
+    padding: 6px 10px;
+  }
+
+  .left {
+    justify-content: center;
+  }
+}
+
+/* ============= Top Navbar End ============= */
+
+
+/* ============= Main Navbar Start ============= */
+@media only screen and (max-width: 850px) {
+  .navbar ul {
+    gap: 8px;
+  }
+
+  .navbar .nav-link {
+    font-size: 12px;
+    padding: 4px 6px;
+  }
+
+  .navbar-brand img {
+    width: 130px;
+    height: 25px;
+  }
+
+  .btn {
+    font-size: 12px;
+    border-radius: 15px;
+    padding: 3px 8px;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-logo {
+    width: 120px;
+  }
+
+  .navbar ul {
+    display: none;
+  }
+
+  .search-bar {
+    max-width: 240px;
+  }
+
+  .search-input {
+    font-size: 14px;
+    padding: 7px 22px 7px 12px;
+  }
+}
+
+@media (max-width: 400px) {
+
+  .navbar-brand img,
+  .nav-logo {
+    width: 90px;
+  }
+
+  .search-input {
+    font-size: 13px;
+    padding: 8px 34px 8px 12px;
+  }
+
+  .search-bar .fa-magnifying-glass {
+    font-size: 14px;
+    right: 10px;
+  }
+}
+
+@media (max-width: 320px) {
+
+  .navbar-brand img,
+  .nav-logo {
+    width: 75px;
+  }
+
+  .search-input {
+    font-size: 12px;
+padding: 5px 8px;
+  }
+
+  .search-bar .fa-magnifying-glass {
+    font-size: 13px;
+    right: 8px;
+  }
+}
+
+@media (max-width: 280px) {
+
+  .navbar-brand img,
+  .nav-logo {
+    width: 60px;
+  }
+
+  .search-input {
+    font-size: 11px;
+  }
+
+  .search-bar .fa-magnifying-glass {
+    font-size: 12px;
+    right: 6px;
+  }
+}
+
+/* ============= Main Navbar End ============= */
+
+/* ============= Bottom Navbar Start ============= */
+@media only screen and (max-width: 1048px) {
+  .bottom-nav .container-xxl {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media only screen and (max-width: 632px) {
+  .bottom-nav .bottom-right {
+    display: none;
+  }
+
+}
+
+@media only screen and (max-width: 430px) {
+  .bottom-nav {
+    display: none !important;
+  }
+}
+
+/* ============= Bottom Navbar End ============= */
+
+/* ============= Header End ============= */
+
+
+/* ============= Hero Section Start ============= */
+@media only screen and (max-width: 748px) {
+  .mul-inputs {
+    flex-wrap: wrap;
+  }
+
+  .mul-inputs .border-inp {
+    margin: 0;
+  }
+
+  .hero-container .texts {
+    width: 100%;
+  }
+
+  .hero-section .texts p {
+    font-size: 14px;
+  }
+
+  .hero-section .texts h1 {
+    font-size: 38px;
+  }
+
+  .search-container {
+    padding: 2px 5px;
+  }
+
+  .search-btn {
+    padding: 10px 15px;
+    font-size: 14px;
+  }
+
+  .hero-section {
+    padding: 30px 0;
+  }
+
+}
+
+@media only screen and (max-width: 390px) {
+  .search-container {
+    max-width: 100%;      
+    padding: 2px 6px;     
+  }
+
+  .search-container input {
+    font-size: 13px;      
+    padding: 6px 10px;    
+  }
+
+  .icon-btn img {
+    width: 18px;
+    height: 18px;
+  }
+
+  .search-btn {
+    font-size: 13px;
+    padding: 6px 12px;    
+  }
+
+  .mul-inputs {
+    flex-wrap: wrap;      
+    gap: 10px;
+  }
+
+  .mul-inputs .border-inp {
+    font-size: 12px;
+    padding: 4px 12px;
+  }
+
+  .hero-section {
+    padding: 20px 0;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .search-container input {
+    font-size: 12px;
+    padding: 5px 8px;
+  }
+
+  .search-btn {
+    font-size: 12px;
+    padding: 5px 10px;
+  }
+
+  .icon-btn img {
+    width: 16px;
+    height: 16px;
+  }
+}
+/* ============= Hero Section End ============= */
+
+
+/* ============= Trade Solutions Section Start =============  */
+@media only screen and (max-width: 946px){
+  .trade-section .cards{
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+}
+/* ============= Trade Solutions Section End =============  */
+
+
+/* ============= Market Categories Section Start ============= */
+@media only screen and (max-width: 700px){
+  .market-section .market-text{
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.market-section .market-text h2{
+  font-size: 38px;
+  text-align: center;
+}
+}
+
+@media only screen and (max-width: 330px){
+  .market-section .market-text .quantity{
+    grid-template-columns: 1fr; 
+    justify-items: center;
+  }
+
+  .overlay span{
+    font-size: 30px;
+}
+
+.overlay p{
+    font-size: 15px;
+}
+}
+
+
+
+/* ============= Market Categories Section End ============= */
+
+
+
