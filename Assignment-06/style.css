@@ -858,129 +858,156 @@ button {
 
 /* Chanhe ================ */
 
-
 /* ============= Search Flow Section Ends ============= */
 
 
-/* ============= Slider Section Start ============= */
+/* ============= Discount Slider Section Start ============= */
 .discount-section {
-            background-color: #f5ece6;
-            padding: 40px 20px;
-            text-align: center;
-            font-family: Arial, sans-serif;
-            position: relative;
-        }
+    background-color: #f5ece6;
+    padding: 40px 20px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    position: relative;
+}
 
-        .discount-section .container-xxl {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
+.discount-section .container-xxl {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
-        .discount-section h2 {
-            color: #5d4037;
-            font-size: 2.5em;
-            margin-bottom: 10px;
-        }
+.discount-section h2 {
+    color: #5d4037;
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
 
-        .discount-section p {
-            color: #5d4037;
-            font-size: 1.1em;
-            margin-bottom: 20px;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-        }
+.discount-section p {
+    color: #5d4037;
+    font-size: 1.1em;
+    margin-bottom: 20px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
 
-        .slider-section {
-            position: relative;
-            max-width: 800px;
-            margin: 0 auto;
-            overflow: hidden;
-        }
+.discount-section .slider-section {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    overflow: hidden;
+}
 
-        .slide {
-            display: none;
-            padding: 20px;
-            background: #fff;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            text-align: left;
-        }
+.discount-section .slide {
+    display: none;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    position: relative;
+    min-height: 100px;
+    /* Ensure minimum height for consistency */
+}
 
-        .slide.active {
-            display: block;
-        }
+.discount-section .slide.active {
+    display: flex;
+    align-items: center;
+}
 
-        .slide img {
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
-            float: left;
-            margin-right: 20px;
-        }
+.discount-section .slide img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-right: 20px;
+    object-fit: cover;
+    /* Ensure image fits within circle */
+}
 
-        .slide .content {
-            overflow: hidden;
-        }
+.slide .content {
+    flex: 1;
+    text-align: left;
+}
 
-        .slide .content p {
-            margin: 0;
-            font-style: italic;
-            color: #333;
-        }
+.discount-section .slide .content p {
+    margin: 0;
+    font-style: italic;
+    color: #333;
+    position: relative;
+    padding-left: 20px;
+    /* Space for quote mark */
+}
 
-        .slide .content span {
-            display: block;
-            color: #5d4037;
-            font-weight: bold;
-        }
+.discount-section .slide .content p:before {
+    content: '“';
+    position: absolute;
+    left: 0;
+    font-size: 1.5em;
+    color: #5d4037;
+}
 
-        .nav-arrow {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            background: #5d4037;
-            color: #fff;
-            border: none;
-            padding: 10px;
-            cursor: pointer;
-            border-radius: 50%;
-            font-size: 1.5em;
-            z-index: 1; /* Ensure arrows are above the slides */
-        }
+.discount-section .slide .content p:after {
+    content: '”';
+    font-size: 1.5em;
+    color: #5d4037;
+}
 
-        .prev {
-            left: 10px;
-        }
+.discount-section .slide .content span {
+    display: block;
+    color: #5d4037;
+    font-weight: bold;
+    margin-top: 10px;
+}
 
-        .next {
-            right: 10px;
-        }
+.discount-section .nav-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #5d4037;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    font-size: 1.5em;
+    z-index: 1;
+}
 
-        .nav-arrow:hover {
-            background: #3e2723;
-        }
+.discount-section .prev {
+    left: 10px;
+}
 
-        @media (max-width: 600px) {
-            .discount-section h2 {
-                font-size: 1.8em;
-            }
+.discount-section .next {
+    right: 10px;
+}
 
-            .discount-section p {
-                font-size: 0.9em;
-            }
+.discount-section .nav-arrow:hover {
+    background: #3e2723;
+}
 
-            .slide img {
-                width: 60px;
-                height: 60px;
-            }
+@media (max-width: 600px) {
+    .discount-section h2 {
+        font-size: 1.8em;
+    }
 
-            .nav-arrow {
-                padding: 8px;
-                font-size: 1.2em;
-            }
-        }
+    .discount-section p {
+        font-size: 0.9em;
+    }
+
+    .discount-section .slide img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .discount-section .slide {
+        padding: 15px;
+    }
+
+    .discount-section .nav-arrow {
+        padding: 8px;
+        font-size: 1.2em;
+    }
+}
 
 
 
@@ -990,5 +1017,5 @@ button {
 
 
 
+/* ============= Discount Slider Section End ============= */
 
-/* ============= Slider Section End ============= */
