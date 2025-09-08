@@ -413,19 +413,82 @@ padding: 5px 8px;
 /* ============= Search Flow Section End ============= */
 
 
-/* ============= Slider Section Start ============= */
+/* ============= Discount Slider Section Start ============= */
+@media only screen and (max-width: 700px) {
+    .discount-section h2 {
+        font-size: 38px;
+    }
+
+    .discount-section p {
+        font-size: 18px;
+    }
+
+    .discount-section .slide img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .discount-section .slide{
+        flex-direction: column;
+        align-self: flex-start;
+    }
+
+    .discount-section .slide .content p{
+      font-size: 15px;
+    }
+}
+/* ============= Discount Slider Section End ============= */
+
+
+/* ============= Signup Section Start ============= */
+@media only screen and (max-width: 700px){
+  .signup-section .signup-data h2{
+    font-size: 38px;
+}
+
+.signup-section .signup-data p{
+    font-size: 18px;
+}
+}
+/* ============= Signup Section End ============= */
+
+
+/* ============= Vision Section Start ============= */
+@media only screen and (max-width: 1060px){
+  .vision-section .our-mission img{
+    width: 380px;
+    height: 350px;
+  }
+}
+
+@media only screen and (max-width: 850px){
+  .vision-section .our-mission{
+    flex-direction: column;
+  }
+}
+
+@media only screen and (max-width: 700px){
+  .vision-section h2{
+    font-size: 38px;
+}
+
+.vision-section p{
+    font-size: 18px;
+}
+}
+
+@media only screen and (max-width: 440px){
+  .vision-section .our-mission img{
+    width: 100%;
+    height: auto;
+  }
+}
+/* ============= Vision Section End ============= */
+
+
+/* ============= Country Section Start ============= */
 
 
 
 
-
-
-
-
-
-
-
-/* ============= Slider Section End ============= */
-
-
-
+/* ============= Country Section End ============= */

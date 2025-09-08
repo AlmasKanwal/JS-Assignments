@@ -1,28 +1,4 @@
-let currentIndex = 0;
-const track = document.getElementById('sliderTrack');
-const slides = document.querySelectorAll('.slide');
-const totalSlides = slides.length;
-
-function moveSlide(direction) {
-    currentIndex += direction;
-
-    if (currentIndex < 0) {
-        currentIndex = totalSlides - 1;
-    } else if (currentIndex >= totalSlides) {
-        currentIndex = 0;
-    }
-
-    track.style.transform = `translateX(-${currentIndex * 100}%)`;
-}
-
-// Optional autoplay
-// setInterval(() => {
-//     moveSlide(1);
-// }, 4000);
-
-
-
-// <!-- Nav Fixed Start -->
+// Nav Fixed Start 
 
 const navbar = document.getElementById('mainNavbar');
 const navLogo = document.getElementById('navLogo');
@@ -37,9 +13,9 @@ window.addEventListener('scroll', function () {
     }
 });
 
-//   <!-- Nav Fixed End -->
+//  Nav Fixed End 
 
-//   <!-- Search Flow Image Start -->
+// Search Flow Image Start 
 
 const steps = document.querySelectorAll(".step");
 const previewImage = document.getElementById("preview-image");
@@ -63,24 +39,26 @@ steps.forEach(step => {
         });
     });
 });
-//   <!-- Search Flow Image End -->
+//  Search Flow Image End 
 
 
+// Discount Slider Section Start
 let slideIndex = 0;
-        var slider = document.getElementsByClassName("slide");
+var slider = document.getElementsByClassName("slide");
 
-        function showSlides(n) {
-            if (n >= slider.length) { slideIndex = 0 }
-            if (n < 0) { slideIndex = slider.length - 1 }
-            for (let i = 0; i < slider.length; i++) {
-                slider[i].classList.remove("active");
-            }
-            slider[slideIndex].classList.add("active");
-        }
+function showSlides(n) {
+    if (n >= slider.length) { slideIndex = 0 }
+    if (n < 0) { slideIndex = slider.length - 1 }
+    for (let i = 0; i < slider.length; i++) {
+        slider[i].classList.remove("active");
+    }
+    slider[slideIndex].classList.add("active");
+}
 
-        function plusSlides(n) {
-            slideIndex += n;
-            showSlides(slideIndex);
-        }
+function plusSlides(n) {
+    slideIndex += n;
+    showSlides(slideIndex);
+}
 
-        showSlides(slideIndex);
+showSlides(slideIndex);
+// Discount Slider Section End

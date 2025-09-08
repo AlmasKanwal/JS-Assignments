@@ -124,7 +124,6 @@ header {
 .navbar {
     background-color: var(--blackColor);
     color: var(--whiteColor);
-    /* padding: 8px 15px; */
     transition: all 0.3s ease;
 }
 
@@ -864,9 +863,8 @@ button {
 /* ============= Discount Slider Section Start ============= */
 .discount-section {
     background-color: #f5ece6;
-    padding: 40px 20px;
+    padding: 80px 20px;
     text-align: center;
-    font-family: Arial, sans-serif;
     position: relative;
 }
 
@@ -877,37 +875,38 @@ button {
 }
 
 .discount-section h2 {
-    color: #5d4037;
-    font-size: 2.5em;
+    color: #51200b;
+    font-size: 44px;
     margin-bottom: 10px;
 }
 
 .discount-section p {
-    color: #5d4037;
+    color: #666666;
     font-size: 1.1em;
+    margin-bottom: 15px;
+}
+
+.discount-section a{
+    color: #222222;
     margin-bottom: 20px;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 .discount-section .slider-section {
     position: relative;
-    max-width: 800px;
+    max-width: 1000px;
     margin: 0 auto;
     overflow: hidden;
 }
 
 .discount-section .slide {
     display: none;
-    padding: 20px;
+    padding: 20px 60px;
     background: #fff;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: left;
     position: relative;
     min-height: 100px;
-    /* Ensure minimum height for consistency */
 }
 
 .discount-section .slide.active {
@@ -921,7 +920,6 @@ button {
     border-radius: 50%;
     margin-right: 20px;
     object-fit: cover;
-    /* Ensure image fits within circle */
 }
 
 .slide .content {
@@ -932,10 +930,9 @@ button {
 .discount-section .slide .content p {
     margin: 0;
     font-style: italic;
-    color: #333;
+    color: #222222;
     position: relative;
     padding-left: 20px;
-    /* Space for quote mark */
 }
 
 .discount-section .slide .content p:before {
@@ -954,9 +951,10 @@ button {
 
 .discount-section .slide .content span {
     display: block;
-    color: #5d4037;
+    color: #222222;
     font-weight: bold;
     margin-top: 10px;
+    margin-bottom: 20px;
 }
 
 .discount-section .nav-arrow {
@@ -964,13 +962,15 @@ button {
     top: 50%;
     transform: translateY(-50%);
     background: #5d4037;
-    color: #fff;
     border: none;
-    padding: 10px;
-    cursor: pointer;
     border-radius: 50%;
-    font-size: 1.5em;
     z-index: 1;
+    width: 30px;
+    height: 30px;
+}
+
+.discount-section .nav-arrow i{
+    color: #ffffff;
 }
 
 .discount-section .prev {
@@ -980,42 +980,79 @@ button {
 .discount-section .next {
     right: 10px;
 }
-
-.discount-section .nav-arrow:hover {
-    background: #3e2723;
-}
-
-@media (max-width: 600px) {
-    .discount-section h2 {
-        font-size: 1.8em;
-    }
-
-    .discount-section p {
-        font-size: 0.9em;
-    }
-
-    .discount-section .slide img {
-        width: 60px;
-        height: 60px;
-    }
-
-    .discount-section .slide {
-        padding: 15px;
-    }
-
-    .discount-section .nav-arrow {
-        padding: 8px;
-        font-size: 1.2em;
-    }
-}
-
-
-
-
-
-
-
-
-
 /* ============= Discount Slider Section End ============= */
 
+
+/* ============= Signup Section Start ============= */
+.signup-section{
+    padding: 80px 20px;
+    background: url('./assets/signup-img.png') center/cover no-repeat;
+}
+
+.signup-section .signup-data{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    color: #ffffff;
+    text-align: center;
+}
+
+.signup-section .signup-data h2{
+    font-size: 44px;
+}
+
+.signup-section .signup-data p{
+    font-size: 20px;
+}
+
+.signup-section .signup-data .btn {
+    background-color: var(--orangeColor) !important;
+    color: var(--whiteColor) !important;
+    border-radius: 20px;
+    padding: 8px 30px;
+}
+/* ============= Signup Section End ============= */
+
+
+/* ============= Vision Section Start ============= */
+.vision-section{
+    padding: 80px 20px;
+}
+
+.vision-section h2 {
+    color: #51200b;
+    font-size: 44px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.vision-section p {
+    color: #666666;
+    font-size: 1.1em;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.vision-section .our-mission{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 10px;
+}
+
+.vision-section .our-mission img{
+    width: 480px;
+    height: 440px;
+}
+/* ============= Vision Section End ============= */
+
+
+/* ============= Country Section Start ============= */
+
+
+
+
+/* ============= Country Section End ============= */
