@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 43-48</title>
+    <link rel="stylesheet" href="./style.css">
+    <style>
+        a {
+            color: brown;
+        }
+
+        .mobile-images {
+            display: flex;
+            gap: 30px;
+        }
+
+        .mobile-images img {
+            border: 2px solid rgb(8, 8, 181);
+            padding: 10px;
+        }
+
+        .counter-app{
+            display: flex;
+            gap: 10px;
+        }
+
+        .counter-app button{
+            padding: 10px 20px;
+            background-color: brown;
+            color: white;
+            border: none;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 style="text-align: center;">EVENTS</h1>
+
+    <!-- Question No.01: Show an alert box on click on a link -->
+    <h2>Question No.01</h2>
+    <h3>Show Alert Box onclick</h3>
+    <a href="JavaScript:void(0);" onclick="alert('Welcome to our Website!')">Alert Box here</a>
+
+
+    <!-- Question No.02: Display some Mobile images in browser. On click on an image Show the message in alert to user. -->
+    <h2>Question No.02</h2>
+    <h3>Mobile Phone Lookup</h3>
+    <div class="mobile-images">
+        <img src="./assets/mobile-1.png" onclick="alert('Thanks for purchasing iPhone 6 Plus from us')" alt="Mobile">
+        <img src="./assets/mobile-2.png" onclick="alert('Thanks for purchasing Galaxy S6 Edge Plus from us')"
+            alt="Mobile">
+        <img src="./assets/mobil-3.png" onclick="alert('Thanks for purchasing V10 from us')" alt="Mobile">
+        <img src="./assets/mobile-4.png" onclick="alert('Thanks for purchasing Huawei from us')" alt="Mobile">
+    </div>
+
+    <!-- Question No.03: Display 10 student records in table and each row should contain a delete
+    button. If you click on a button to delete a record, entire row should be
+    deleted -->
+    <h2>Question No.03</h2>
+    <h3>Delete Record</h3>
+
+    <table>
+        <tr>
+            <th>Index</th>
+            <th>Name</th>
+            <th>Class</th>
+            <th>Action</th>
+        </tr>
+
+        <tr>
+            <td>0</td>
+            <td>John</td>
+            <td>10</td>
+            <td><button>Delete</button></td>
+        </tr>
+
+        <tr>
+            <td>1</td>
+            <td>Doe</td>
+            <td>9</td>
+            <td><button>Delete</button></td>
+        </tr>
+
+        <tr>
+            <td>2</td>
+            <td>James</td>
+            <td>8</td>
+            <td><button>Delete</button></td>
+        </tr>
+    </table>
+
+
+    <!-- Question No.04: Display an image in browser. Change the picture on mouseover and set the
+    first picture on mouseout. -->
+    <h2>Question No.04</h2>
+    <h3>Display image and change on mouseover</h3>
+
+    <img src="./assets/nature-1.jpeg" alt="Nature Image" onmouseover="this.src='./assets/nature-2.jpg'"
+        onmouseout="this.src='./assets/nature-1.jpeg'" width="300px" height="200px">
+
+
+    <!-- Question No.05: Show a counter in browser. Counter should increase on click on increase
+    button and decrease on click on decrease button. And show updated counter
+    value in browser. -->
+    <h2>Question No.05</h2>
+    <h3>Counter Increase or Decrease</h3>
+
+    <div class="counter-app">
+        <button id="decrease">Decrease</button>
+        <span id="counter">0</span>
+        <button id="increase">Increase</button>
+    </div>
+
+
+    <script src="./index.js"></script>
+</body>
+
+</html>
