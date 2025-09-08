@@ -300,10 +300,132 @@ padding: 5px 8px;
     font-size: 15px;
 }
 }
-
-
-
 /* ============= Market Categories Section End ============= */
+
+
+/* ============= New Trends Section Start ============= */
+@media only screen and (max-width: 700px){
+  .trends-section h2{
+    font-size: 38px;
+  }
+}
+/* ============= New Trends Section End ============= */
+
+
+/* ============= Factory Sourcing Section Start ============= */
+@media only screen and (max-width: 700px){
+  .factory-section h2{
+    font-size: 38px;
+  }
+}
+
+@media only screen and (max-width: 400px){
+  .sourcing-cards{
+    gap: 10px;
+  }
+
+  .sourcing-cards img{
+    width: 270px;
+  }
+}
+/* ============= Factory Sourcing Section End ============= */
+
+
+/* ============= Trust Protection Section Start =============  */
+@media (max-width: 991px) {
+    .trust-protection-section h2 {
+        font-size: 38px;
+    }
+
+    .trust-cards {
+        flex-direction: column;
+    }
+}
+
+@media only screen and (max-width: 400px){
+  .trust-card img{
+    width: 250px;
+  }
+}
+
+@media only screen and (max-width: 400px){
+  .trust-card img{
+    width: 200px;
+  }
+}
+/* ============= Trust Protection Section End =============  */
+
+
+/* ============= Search Flow Section Start ============= */
+@media only screen and (max-width: 955px){
+  .search-flow .search-images img {
+    width: 300px;
+    height: 300px;
+  }
+}
+
+@media only screen and (max-width: 860px) {
+  .search-flow .search-container {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .search-flow .search-steps {
+    width: 100%;
+  }
+
+  .search-flow .search-images {
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+  }
+
+}
+
+@media (max-width: 768px) {
+  .container-xxl {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+}
+
+@media only screen and (max-width: 700px){
+  .search-flow .search-flow h2 {
+    font-size: 28px;
+  }
+
+  .search-flow .search-images img {
+    width: 250px;
+    height: 250px;
+  }
+
+  .search-flow .search-container{
+    margin: 0;
+  }
+
+}
+
+@media only screen and (max-width: 480px) {
+  .search-flow .title {
+    font-size: 20px;
+  }
+}
+/* ============= Search Flow Section End ============= */
+
+
+/* ============= Slider Section Start ============= */
+
+
+
+
+
+
+
+
+
+
+
+/* ============= Slider Section End ============= */
 
 
 
