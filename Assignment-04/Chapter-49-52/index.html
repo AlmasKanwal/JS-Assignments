@@ -1,14 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chapter 49-52</title>
 </head>
+
 <body>
     <h1 style="text-align: center;">EVENTS</h1>
+
+    <!-- Question No.01: Create a signup form and display form data in your web page on submission. -->
+    <h2>Question No.01</h2>
+    <h3>Sigup Form Data Display</h3>
+
+    <form onsubmit="" id="signup-form">
+        <label for="username">Name</label>
+        <input type="text" id="username"><br><br>
+        <label for="email">Email</label>
+        <input type="email" id="email"><br><br>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <div id="display"></div>
+
+
+    <!-- Question No.02: Suppose in your webpage there is content area in which you have entered your item details, but user can only see some details on first look. When user clicks on “Read more” button, full detail of that particular item will be displayed. -->
+    <h2>Question No.02</h2>
+    <h3>Read More Content</h3>
+
+    <div id="content">
+        <p>This is a beautiful product. It is made with high quality material.
+            <span id="more" style="display: none;">It comes with 1-year warranty, available in multiple colors, and has
+                received excellent customer reviews for durability and design.</span>
+        </p>
+
+        <button id="btn">Read More</button>
+    </div>
+
+
+    <!-- Question No.03: In previous assignment you have created a tabular data using javascript. Let’s modify that. Create a form which takes student’s details and show each student detail in table. Each row of table must contain a delete button and an edit button. On click on delete button entire row should be deleted. On click on edit button, a hidden form will appear with the values of that row. -->
+    <h2>Question No.03</h2>
+    <h3>Student Form</h3>
+
+    <input id="n" placeholder="Name">
+    <input id="e" placeholder="Email">
+    <input id="a" placeholder="Age">
+    <button onclick="add()">Add</button>
+    <button onclick="t.innerHTML=''">Delete All</button>
+
+    <table border="1" cellpadding="5">
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Age</th>
+            <th>Action</th>
+        </tr>
+        <tbody id="t"></tbody>
+    </table>
+
 
 
     <script src="./index.js"></script>
 </body>
+
 </html>
