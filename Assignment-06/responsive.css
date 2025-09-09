@@ -339,10 +339,14 @@ padding: 5px 8px;
   .search-flow .search-container {
     flex-direction: column;
     gap: 30px;
-    padding: 0 20px;
+    padding: 0;
   }
   .search-flow .search-images {
     margin-top: 20px;
+  }
+
+  .search-flow {
+    padding: 60px 15px;  
   }
 }
 
@@ -358,6 +362,10 @@ padding: 5px 8px;
 @media only screen and (max-width: 480px) {
   .search-flow .title {
     font-size: 20px;
+  }
+
+  .search-flow {
+    padding: 60px 5px; 
   }
 }
 /* ============= Search Flow Section End ============= */
