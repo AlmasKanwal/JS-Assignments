@@ -34,7 +34,6 @@ header {
     display: flex;
     align-items: center;
     background-color: #ff3d00;
-    /* padding: 0 15px;    */
 }
 
 .container-xxl {
@@ -125,6 +124,8 @@ header {
     background-color: var(--blackColor);
     color: var(--whiteColor);
     transition: all 0.3s ease;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 .nav-logo {
@@ -241,10 +242,10 @@ button {
     background-position: center;
     background-repeat: no-repeat;
     width: 100%;
-    /* padding: 30px; */
     color: white;
     height: 550px;
     display: flex;
+    padding: 10px 20px;
 }
 
 .hero-section .hero-container {
@@ -276,15 +277,19 @@ button {
     width: 100%;
     max-width: 700px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+
+    position: relative;
 }
 
 .search-container input {
     flex: 1;
     border: none;
     outline: none;
-    padding: 10px 15px;
     font-size: 16px;
     border-radius: 50px;
+
+    width: 100%;
+    padding: 12px 110px 12px 15px;
 }
 
 .icon-btn {
@@ -292,6 +297,12 @@ button {
     border: none;
     cursor: pointer;
     margin-right: 10px;
+
+
+    position: absolute;
+    right: 100px;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .icon-btn img {
@@ -303,11 +314,17 @@ button {
     background: var(--orangeColor);
     color: #fff;
     border: none;
-    padding: 10px 25px;
     border-radius: 50px;
     font-size: 16px;
     cursor: pointer;
     transition: background 0.3s ease;
+
+
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 8px 20px;
 }
 
 .search-btn:hover {
@@ -332,13 +349,12 @@ button {
     border: 1px solid #fff;
     border-radius: 20px;
 }
-
 /* ============= Hero Section End ============= */
 
 
 /* ============= Trade Solutions Section Start =============  */
 .trade-section {
-    padding: 80px 0;
+    padding: 80px 20px;
     background-color: #3a190b;
 }
 
@@ -395,13 +411,12 @@ button {
     transform: scale(1.1);
     transition: all 0.3s ease;
 }
-
 /* ============= Trade Solutions Section End =============  */
 
 
 /* ============= Market Categories Section Start ============= */
 .market-section {
-    padding: 80px 0;
+    padding: 80px 20px;
     background-color: #fff;
 }
 
@@ -730,8 +745,8 @@ button {
 
 /* ============= Search Flow Section Starts ============= */
 .search-flow {
-    padding: 80px 10px;
-    background-color: #ffffff;
+  padding: 80px 20px;
+  background-color: #ffffff;
 }
 
 .search-flow,
@@ -747,9 +762,13 @@ button {
 }
 
 .search-flow h2 {
-    text-align: center;
-    font-size: 44px;
-    margin-bottom: 40px;
+  text-align: center;
+  font-size: 44px;
+  margin-bottom: 60px;
+  max-width: 1000px;   
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.3;
 }
 
 .search-flow .container-xxl {
@@ -757,29 +776,32 @@ button {
 }
 
 .search-flow .search-container {
-    display: flex;
-    justify-content: space-between;
-    gap: 40px;
-    margin: auto;
-    overflow: hidden;
-    padding: 10px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 60px;
+  max-width: 1400px;   
+  margin: 0 auto;      
+  width: 100%;
+  padding: 0 20px;
 }
 
 .search-flow .search-steps {
-    /* width: 55%; */
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
+  flex: 1 1 50%;
+  max-width: 650px;   
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
 }
 
 .search-flow .step {
-    cursor: pointer;
-    border-left: 3px solid transparent;
-    padding-left: 12px;
-    transition: all 0.3s ease;
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
+  cursor: pointer;
+  border-left: 3px solid transparent;
+  padding-left: 15px;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .search-flow .icon-text {
@@ -847,11 +869,19 @@ button {
 }
 
 .search-flow .search-images img {
-    width: 420px;
-    height: 420px;
-    border-radius: 10px;
-    object-fit: cover;
-    transition: opacity 0.3s ease;
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 15px;
+  object-fit: cover;
+  transition: opacity 0.3s ease;
+}
+
+.search-flow .search-images {
+  flex: 1 1 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 
@@ -886,7 +916,7 @@ button {
     margin-bottom: 15px;
 }
 
-.discount-section a{
+.discount-section a {
     color: #222222;
     margin-bottom: 20px;
 }
@@ -969,7 +999,7 @@ button {
     height: 30px;
 }
 
-.discount-section .nav-arrow i{
+.discount-section .nav-arrow i {
     color: #ffffff;
 }
 
@@ -980,16 +1010,17 @@ button {
 .discount-section .next {
     right: 10px;
 }
+
 /* ============= Discount Slider Section End ============= */
 
 
 /* ============= Signup Section Start ============= */
-.signup-section{
+.signup-section {
     padding: 80px 20px;
     background: url('./assets/signup-img.png') center/cover no-repeat;
 }
 
-.signup-section .signup-data{
+.signup-section .signup-data {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -999,11 +1030,11 @@ button {
     text-align: center;
 }
 
-.signup-section .signup-data h2{
+.signup-section .signup-data h2 {
     font-size: 44px;
 }
 
-.signup-section .signup-data p{
+.signup-section .signup-data p {
     font-size: 20px;
 }
 
@@ -1013,11 +1044,12 @@ button {
     border-radius: 20px;
     padding: 8px 30px;
 }
+
 /* ============= Signup Section End ============= */
 
 
 /* ============= Vision Section Start ============= */
-.vision-section{
+.vision-section {
     padding: 80px 20px;
 }
 
@@ -1035,7 +1067,7 @@ button {
     text-align: center;
 }
 
-.vision-section .our-mission{
+.vision-section .our-mission {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1043,16 +1075,263 @@ button {
     padding: 10px;
 }
 
-.vision-section .our-mission img{
+.vision-section .our-mission img {
     width: 480px;
     height: 440px;
 }
+
 /* ============= Vision Section End ============= */
 
 
 /* ============= Country Section Start ============= */
+.country-section {
+    padding: 40px 20px;
+    background-color: #ffffff;
+}
+
+.country-section .container-xxl {
+    flex-direction: column;
+    gap: 20px;
+}
+
+.country-section .counter-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    gap: 30px;
+}
 
 
+.country-section .counter-head h2 {
+    font-size: 44px;
+    color: #222222;
+}
 
+.country-section .counter-head a {
+    font-size: 20px;
+    color: #222222;
+}
+
+
+.country-section .countries {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 70px;
+}
+
+.country-section .country-data {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.country-section .country-data img {
+    width: 66px;
+}
+
+.country-section .country-data p {
+    font-size: 16px;
+    color: #222222;
+}
 
 /* ============= Country Section End ============= */
+
+
+/* ============= About Alibaba Section Start ============= */
+.about-section {
+    padding: 30px 20px 10px 20px;
+    background-color: #ffffff;
+    color: #666666;
+    font-size: 14px;
+}
+
+.alibaba-content {
+    display: block;
+}
+
+.hidden-about {
+    display: none;
+    padding-top: 10px;
+}
+
+.hidden-about.active {
+    display: block;
+}
+
+.explore-items {
+    margin-top: 15px;
+    color: #000000;
+}
+
+.explore-items span {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.explore-items a {
+    display: inline-block;
+    margin-bottom: 14px;
+    color: #000000;
+    text-decoration: none;
+    border-left: #b4b4b4 1px solid;
+    padding: 0px 10px;
+}
+
+.explore-items a:hover {
+    text-decoration: underline;
+}
+
+.about-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.about-heading h5 {
+    font-size: 20px;
+    color: #000000;
+    font-weight: bold;
+}
+
+#toggleIcon {
+    transition: transform 0.3s ease;
+    color: #000000;
+}
+
+#toggleIcon.rotated {
+    transform: rotate(180deg);
+}
+
+/* ============= About Alibaba Section End ============= */
+
+
+/* ============= Footer Start ============= */
+footer {
+    padding: 30px 20px;
+    background-color: #ffffff;
+    color: #222222;
+}
+
+footer .top-footer {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+footer .footer-data {
+    display: flex;
+    gap: 100px;
+    flex-wrap: wrap;
+}
+
+
+footer .footer-data .footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+footer .footer-data h5 {
+    font-size: 16px;
+    font-weight: bolder;
+}
+
+footer .footer-data a {
+    font-size: 14px;
+    color: #222222;
+    text-decoration: none;
+}
+
+footer .footer-data a:hover {
+    text-decoration: underline;
+}
+
+footer .payment-options {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+footer .payment-options img {
+    height: 28px;
+    width: auto;
+}
+
+footer .social-media {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+footer .app-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+footer .social-links {
+    display: flex;
+    gap: 20px;
+    color: #555;
+    font-size: 28px;
+}
+
+footer .app-link img {
+    width: 100px;
+    height: 40px;
+}
+
+footer .app-link p {
+    font-size: 14px;
+    margin: 0;
+}
+
+footer .app-link a {
+    color: #222222;
+}
+
+footer .bottom-footer {
+    background-color: #f4f4f4;
+}
+
+/* ============= Footer End ============= */
+
+
+/* ============= Bottom Footer Start ============= */
+.bottom-footer {
+    background-color: #f4f4f4;
+    padding: 20px;
+    color: #666666;
+    font-size: 14px;
+}
+
+.bottom-footer .container-xxl {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    text-align: center;
+}
+
+.bottom-footer .bottom-links {
+    display: flex;
+    gap: 5px;
+}
+
+.bottom-footer .bottom-links a {
+    color: #666666;
+    text-decoration: none;
+    border-left: #b4b4b4 1px solid;
+    padding: 0px 5px;
+}
+
+.bottom-footer .bottom-links img {
+    width: 50px;
+    height: 25px;
+}
+
+/* ============= Bottom Footer End ============= */

@@ -28,11 +28,6 @@
 }
 
 @media (max-width: 632px) {
-  /* .container-xxl {
-        flex-direction: column;
-        gap: 6px;
-    } */
-
   .top-navbar {
     height: auto;
     padding: 6px 10px;
@@ -170,6 +165,13 @@ padding: 5px 8px;
 
 
 /* ============= Hero Section Start ============= */
+@media only screen and (max-width: 790px){
+  .hero-section .hero-container{
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
 @media only screen and (max-width: 748px) {
   .mul-inputs {
     flex-wrap: wrap;
@@ -191,71 +193,32 @@ padding: 5px 8px;
     font-size: 38px;
   }
 
-  .search-container {
-    padding: 2px 5px;
-  }
-
-  .search-btn {
-    padding: 10px 15px;
-    font-size: 14px;
-  }
-
   .hero-section {
-    padding: 30px 0;
+    padding: 40px 0;
   }
 
 }
 
 @media only screen and (max-width: 390px) {
-  .search-container {
-    max-width: 100%;      
-    padding: 2px 6px;     
-  }
-
-  .search-container input {
-    font-size: 13px;      
-    padding: 6px 10px;    
-  }
-
   .icon-btn img {
     width: 18px;
     height: 18px;
   }
 
-  .search-btn {
-    font-size: 13px;
-    padding: 6px 12px;    
-  }
-
-  .mul-inputs {
-    flex-wrap: wrap;      
-    gap: 10px;
-  }
-
-  .mul-inputs .border-inp {
-    font-size: 12px;
-    padding: 4px 12px;
-  }
-
   .hero-section {
-    padding: 20px 0;
+    padding: 60px 0;
+    height: 640px;
   }
 }
 
 @media only screen and (max-width: 320px) {
-  .search-container input {
-    font-size: 12px;
-    padding: 5px 8px;
-  }
-
-  .search-btn {
-    font-size: 12px;
-    padding: 5px 10px;
-  }
-
   .icon-btn img {
     width: 16px;
     height: 16px;
+  }
+
+  .search-container input{
+    padding: 10px 90px 10px 10px;
   }
 }
 /* ============= Hero Section End ============= */
@@ -309,6 +272,12 @@ padding: 5px 8px;
     font-size: 38px;
   }
 }
+
+@media only screen and (max-width: 420px){
+  .trends-section {
+    padding: 80px 20px;
+}
+}
 /* ============= New Trends Section End ============= */
 
 
@@ -357,52 +326,33 @@ padding: 5px 8px;
 
 
 /* ============= Search Flow Section Start ============= */
-@media only screen and (max-width: 955px){
+@media only screen and (max-width: 1024px) {
+  .search-flow .search-container {
+    gap: 40px;
+  }
   .search-flow .search-images img {
-    width: 300px;
-    height: 300px;
+    max-width: 400px;
   }
 }
 
 @media only screen and (max-width: 860px) {
   .search-flow .search-container {
     flex-direction: column;
-    padding: 20px;
+    gap: 30px;
+    padding: 0 20px;
   }
-
-  .search-flow .search-steps {
-    width: 100%;
-  }
-
   .search-flow .search-images {
-    display: flex;
-    justify-content: center;
-    margin-top: 25px;
-  }
-
-}
-
-@media (max-width: 768px) {
-  .container-xxl {
-    padding-left: 0 !important;
-    padding-right: 0 !important;
+    margin-top: 20px;
   }
 }
 
-@media only screen and (max-width: 700px){
-  .search-flow .search-flow h2 {
+@media only screen and (max-width: 700px) {
+  .search-flow h2 {
     font-size: 28px;
   }
-
   .search-flow .search-images img {
-    width: 250px;
-    height: 250px;
+    max-width: 300px;
   }
-
-  .search-flow .search-container{
-    margin: 0;
-  }
-
 }
 
 @media only screen and (max-width: 480px) {
@@ -487,8 +437,71 @@ padding: 5px 8px;
 
 
 /* ============= Country Section Start ============= */
+@media only screen and (max-width: 890px){
+  .country-section .counter-head h2{
+    font-size: 38px;
+}
 
+.country-section .counter-head a{
+    font-size: 16px;
+}
+}
 
+@media only screen and (max-width: 780px){
+  .country-section .counter-head{
+    flex-direction: column;
+  }
 
+  .country-section .countries{
+    gap: 20px;
+  }
 
+    .country-section .counter-head h2{
+    text-align: center;
+}
+
+.country-section .counter-head a{
+    text-align: center;
+}
+}
 /* ============= Country Section End ============= */
+
+
+/* ============= Footer Start ============= */
+@media only screen and (max-width: 905px){
+  footer .social-media{
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+@media only screen and (max-width: 600px){
+  footer .footer-data{
+    gap: 50px;
+  }
+
+  footer .app-link{
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+}
+
+@media only screen and (max-width: 340px){
+  footer .social-links{
+    flex-wrap: wrap;
+    font-size: 22px;
+  }
+}
+/* ============= Footer End ============= */
+
+
+/* ============= Bottom Footer Start ============= */
+@media only screen and (max-width: 990px){
+  .bottom-footer .bottom-links{
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+}
+/* ============= Bottom Footer End ============= */

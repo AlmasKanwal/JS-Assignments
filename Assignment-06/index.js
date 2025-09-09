@@ -62,3 +62,13 @@ function plusSlides(n) {
 
 showSlides(slideIndex);
 // Discount Slider Section End
+
+
+// Alibaba About Toggle Start
+function toggleAbout() {
+  const hiddenAbout = document.querySelector('.hidden-about');
+  const toggleIcon = document.getElementById('toggleIcon');
+  hiddenAbout.classList.toggle('active');
+  toggleIcon.classList.toggle('rotated');
+}
+// Alibaba About Toggle End
