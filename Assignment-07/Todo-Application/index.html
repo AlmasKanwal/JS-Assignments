@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taskora</title>
+    <!-- Google Font (Roboto) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- External Stylesheet -->
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <!-- Taskora (Todo Application) -->
+    <div class="container">
+        <h1>Taskora</h1>
+        <div class="todo-controls">
+            <input type="text" id="task" placeholder="Add a new task...">
+            <button onclick="addTask()">Add</button>
+        </div>
+        <p id="message"><i class="fa-solid fa-triangle-exclamation"></i> Please enter a task</p>
+        <ul id="todoList"></ul>
+        <button class="clearAll" onclick="deleteAll()">Clear All</button>
+    </div>
+
+    <!-- External JS -->
+    <script src="./index.js"></script>
+</body>
+</html>
