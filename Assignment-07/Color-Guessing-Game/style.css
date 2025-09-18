@@ -1,0 +1,149 @@
+* {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    font-family: "Roboto", sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #fce4ec, #f8bbd9);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* === Animations === */
+@keyframes slideDown {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes popIn {
+    from {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Color Guessing Game */
+.container {
+    max-width: 600px;
+    width: 100%;
+    margin: auto;
+    background: #fff;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    animation: slideDown 0.8s ease forwards;
+}
+
+h1 {
+    color: #ad1457;
+    margin-bottom: 15px;
+}
+
+.level-btn {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 20px;
+    background: #ec407a;
+    color: #fff;
+    margin: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: transform 0.2s ease;
+}
+
+.level-btn:hover {
+    transform: scale(1.1);
+}
+
+#sequence-display,
+#color-options {
+    margin: 20px 0;
+}
+
+.color-btn {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 10px;
+    cursor: pointer;
+    border: 2px solid #ad1457;
+    animation: popIn 0.4s ease forwards;
+    transform: scale(0);
+}
+
+.message {
+    margin: 10px 0;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.control-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 15px;
+    background: #ad1457;
+    color: #fff;
+    margin: 10px 5px;
+    cursor: pointer;
+    display: none;
+    transition: transform 0.2s ease;
+}
+
+.control-btn:hover {
+    background: #880e4f;
+    transform: scale(1.1);
+}
+
+/* Responsive Design */
+@media only screen and (max-width: 714px) {
+    .container {
+        margin: 20px;
+    }
+
+    .color-btn {
+        width: 60px;
+        height: 60px;
+    }
+
+    .level-btn {
+        font-size: 0.9em;
+        padding: 10px 18px;
+    }
+}
+
+@media only screen and (max-width: 380px) {
+    .color-btn {
+        width: 50px;
+        height: 50px;
+        margin: 8px;
+    }
+
+    .level-btn {
+        font-size: 0.85em;
+        padding: 8px 15px;
+    }
+}
+
+@media only screen and (max-width: 310px) {
+    h1 {
+        font-size: 1.6em;
+    }
+}

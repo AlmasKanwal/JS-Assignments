@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chroma Quest</title>
+    <!-- Google Font Roboto -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- External Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- ============ Color Guessing Game Start ============ -->
+    <div class="container">
+        <h1>Chroma Quest</h1>
+        <div id="level-select">
+            <p>Select Level:</p>
+            <button class="level-btn" onclick="setLevel('easy')">Easy</button>
+            <button class="level-btn" onclick="setLevel('medium')">Medium</button>
+            <button class="level-btn" onclick="setLevel('hard')">Hard</button>
+        </div>
+
+        <p id="game-message" class="message">Choose a level to start</p>
+        <div id="sequence-display"></div>
+        <div id="color-options"></div>
+        <p id="score-display" class="message"></p>
+
+        <!-- Restart & Exit buttons -->
+        <button id="restartBtn" class="control-btn" onclick="restartGame()">Restart</button>
+        <button id="exitBtn" class="control-btn" onclick="exitGame()">Exit</button>
+    </div>
+    <!-- ============ Color Guessing Game End ============ -->
+
+    <!-- External JS -->
+    <script src="./index.js"></script>
+</body>
+</html>
