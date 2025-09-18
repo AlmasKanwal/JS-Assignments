@@ -1,130 +1,90 @@
-// All available game colors
-var availableColors = ["#f48fb1", "#ec407a", "#ab47bc", "#42a5f5", "#26a69a", "#ffca28", "#ef5350", "#c6e75a"];
-
-// Game state
-var sequenceToRemember = [];
-var playerSequence = [];
-var difficultyLevel = "";
-var currentRound = 1;
-var playerScore = 0;
-var colorsInPlay = 4;
-var gameActive = false;
-
-// DOM Elements
-var messageBox = document.getElementById("game-message");
-var sequenceContainer = document.getElementById("sequence-display");
-var colorOptionsContainer = document.getElementById("color-options");
-var scoreBox = document.getElementById("score-display");
-
+var score = 0;
+var currentQuestion = {};
+var gameArea = document.getElementById("gameArea");
+var scoreBox = document.getElementById("score");
 var restartBtn = document.getElementById("restartBtn");
 var exitBtn = document.getElementById("exitBtn");
-var levelSelect = document.getElementById("level-select");
+var levelSelect = document.getElementById("levelSelect");
+var startMessage = document.getElementById("startMessage");
 
-// Set difficulty level
-function setLevel(level) {
-    difficultyLevel = level;
-    if (level === "easy") colorsInPlay = 4;
-    if (level === "medium") colorsInPlay = 6;
-    if (level === "hard") colorsInPlay = 8;
-
-    currentRound = 1;
-    playerScore = 0;
-    scoreBox.innerText = "Score: " + playerScore;
-
-    levelSelect.style.display = "none";
+// Start game
+function setLevel(lv) {
+    level = lv;
+    score = 0;
+    scoreBox.innerText = "Score: " + score;
+    levelSelect.style.display = "none";  // hide levels
     restartBtn.style.display = "inline-block";
     exitBtn.style.display = "inline-block";
-    gameActive = true; 
-
-    startRound();
+    nextQuestion();
 }
 
-// Start each round
-function startRound() {
-    if (!gameActive) return;
+function getRandomInt(min, max) { return Math.floor(Math.random() * (max - min + 1)) + min; }
 
-    sequenceToRemember = [];
-    playerSequence = [];
-    sequenceContainer.innerHTML = "";
-    colorOptionsContainer.innerHTML = "";
+function nextQuestion() {
+    gameArea.innerHTML = "";
+    var num1, num2, answer;
+    if (level === "easy") { num1 = getRandomInt(1, 10); num2 = getRandomInt(1, 10); }
+    else if (level === "medium") { num1 = getRandomInt(10, 50); num2 = getRandomInt(10, 50); }
+    else { num1 = getRandomInt(50, 100); num2 = getRandomInt(50, 100); }
+    answer = num1 + num2;
+    var hideNum = getRandomInt(1, 2);
+    var questionText;
+    if (hideNum === 1) { questionText = "? + " + num2 + " = " + answer; currentQuestion.answer = num1; }
+    else { questionText = num1 + " + ? = " + answer; currentQuestion.answer = num2; }
+    currentQuestion.text = questionText;
 
-    // generate random sequence
-    for (var i = 0; i < currentRound; i++) {
-        var randomColor = availableColors[Math.floor(Math.random() * colorsInPlay)];
-        sequenceToRemember.push(randomColor);
-    }
+    // display question
+    var qNode = document.createElement("p");
+    var tNode = document.createTextNode(questionText);
+    qNode.appendChild(tNode);
+    gameArea.appendChild(qNode);
 
-    // show sequence
-    for (var i = 0; i < sequenceToRemember.length; i++) {
-        var seqColor = document.createElement("div");
-        seqColor.className = "color-btn";
-        seqColor.style.background = sequenceToRemember[i];
-        sequenceContainer.appendChild(seqColor);
-    }
+    // input box
+    var input = document.createElement("input");
+    input.setAttribute("id", "guessInput");
+    input.setAttribute("placeholder", "Enter missing number");
+    gameArea.appendChild(input);
 
-    // hide sequence after short delay
-    setTimeout(function () {
-        if (!gameActive) return;
-        sequenceContainer.innerHTML = "";
-        messageBox.innerText = "Now repeat the sequence!";
-        showColorOptions();
-    }, 1500);
+    // guess button
+    var btn = document.createElement("button");
+    btn.innerText = "Guess";
+    btn.onclick = checkAnswer;
+    gameArea.appendChild(btn);
+
+    // message
+    var msg = document.createElement("p");
+    msg.setAttribute("id", "message");
+    msg.className = "message";
+    gameArea.appendChild(msg);
 }
 
-// Show color choices
-function showColorOptions() {
-    colorOptionsContainer.innerHTML = "";
-    for (var i = 0; i < colorsInPlay; i++) {
-        var btn = document.createElement("div");
-        btn.className = "color-btn";
-        btn.style.background = availableColors[i];
-        btn.setAttribute("data-color", availableColors[i]);
-
-        btn.onclick = function () {
-            if (!gameActive) return;
-            var chosenColor = this.getAttribute("data-color");
-            playerSequence.push(chosenColor);
-
-            // check move
-            if (playerSequence[playerSequence.length - 1] !== sequenceToRemember[playerSequence.length - 1]) {
-                messageBox.innerText = "❌ Wrong! Game Over!";
-                colorOptionsContainer.innerHTML = "";
-                return;
-            }
-
-            // round passed
-            if (playerSequence.length === sequenceToRemember.length) {
-                playerScore++;
-                currentRound++;
-                scoreBox.innerText = "Score: " + playerScore;
-                messageBox.innerText = "✅ Correct! Next Round...";
-                setTimeout(startRound, 1000);
-            }
-        };
-        colorOptionsContainer.appendChild(btn);
+function checkAnswer() {
+    var userGuess = document.getElementById("guessInput").value;
+    var msg = document.getElementById("message");
+    if (userGuess === "") { msg.innerText = "⚠️ Enter a number!"; return; }
+    if (parseInt(userGuess) === currentQuestion.answer) {
+        msg.innerText = "✅ Correct!";
+        score++;
+        scoreBox.innerText = "Score: " + score;
+        setTimeout(nextQuestion, 800);
+    } else {
+        msg.innerText = "❌ Wrong! Correct answer was " + currentQuestion.answer;
+        setTimeout(nextQuestion, 1200);
     }
 }
 
 // Restart game
 function restartGame() {
-    currentRound = 1;
-    playerScore = 0;
-    scoreBox.innerText = "Score: " + playerScore;
-    gameActive = true;
-    startRound();
+    score = 0;
+    scoreBox.innerText = "Score: " + score;
+    nextQuestion();
 }
 
 // Exit game
 function exitGame() {
-    difficultyLevel = "";
-    currentRound = 1;
-    playerScore = 0;
-    gameActive = false;
+    gameArea.innerHTML = "";
     scoreBox.innerText = "";
-    messageBox.innerText = "Choose a level to start";
-    sequenceContainer.innerHTML = "";
-    colorOptionsContainer.innerHTML = "";
+    levelSelect.style.display = "block";   // show levels again
     restartBtn.style.display = "none";
     exitBtn.style.display = "none";
-    levelSelect.style.display = "block";
 }

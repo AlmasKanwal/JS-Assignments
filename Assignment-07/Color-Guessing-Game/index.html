@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chroma Quest</title>
+    <title>Number Ninja</title>
     <!-- Google Font Roboto -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,28 +16,25 @@
     <!-- External Stylesheet -->
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-    <!-- ============ Color Guessing Game Start ============ -->
+    <!-- ============ Missing Number Game Start ============ -->
     <div class="container">
-        <h1>Chroma Quest</h1>
-        <div id="level-select">
+        <h1>Number Ninja</h1>
+
+        <div id="levelSelect">
             <p>Select Level:</p>
-            <button class="level-btn" onclick="setLevel('easy')">Easy</button>
-            <button class="level-btn" onclick="setLevel('medium')">Medium</button>
-            <button class="level-btn" onclick="setLevel('hard')">Hard</button>
+            <button onclick="setLevel('easy')">Easy</button>
+            <button onclick="setLevel('medium')">Medium</button>
+            <button onclick="setLevel('hard')">Hard</button>
+            <p id="startMessage">Choose a level to start</p>
         </div>
 
-        <p id="game-message" class="message">Choose a level to start</p>
-        <div id="sequence-display"></div>
-        <div id="color-options"></div>
-        <p id="score-display" class="message"></p>
-
-        <!-- Restart & Exit buttons -->
+        <div id="gameArea"></div>
+        <p id="score" class="message"></p>
         <button id="restartBtn" class="control-btn" onclick="restartGame()">Restart</button>
         <button id="exitBtn" class="control-btn" onclick="exitGame()">Exit</button>
     </div>
-    <!-- ============ Color Guessing Game End ============ -->
+    <!-- ============ Missing Number Game End ============ -->
 
     <!-- External JS -->
     <script src="./index.js"></script>
