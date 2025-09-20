@@ -4,10 +4,60 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quiz Application</title>
+    <!-- Google Font (Roboto) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <!-- External Stylesheet -->
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <h1>Quiz Application</h1>
+    <!-- Quiz Application Start -->
+    <div class="quiz-container">
+        <div class="quiz-header">
+            <h1>🌎 Globetrotter Quiz</h1>
+            <p>Explore amazing facts from every corner of our planet!</p>
+        </div>
 
-    <!--  -->
+        <div id="quiz-content">
+            <div class="question-counter" id="questionCounter">
+                Question 1 of 10
+            </div>
+
+            <div class="question-container">
+                <div class="question" id="questionText">
+                    Loading question...
+                </div>
+
+                <div class="options" id="optionsContainer">
+                    <!-- Options will be added here -->
+                </div>
+            </div>
+
+            <div class="navigation">
+                <button class="btn btn-secondary" id="prevBtn" onclick="previousQuestion()">
+                    Previous
+                </button>
+
+                <button class="btn btn-primary" id="submitBtn" onclick="submitQuiz()" style="display: none;">
+                    Finish Quiz
+                </button>
+
+                <button class="btn btn-primary" id="nextBtn" onclick="nextQuestion()">
+                    Next 
+                </button>
+            </div>
+        </div>
+
+        <div id="result-container" class="hidden">
+            <!-- Results will be shown here -->
+        </div>
+
+    </div>
+    <!-- Quiz Application End -->
+
+    <!-- External JS -->
+    <script src="./index.js"></script>
 </body>
 </html>
